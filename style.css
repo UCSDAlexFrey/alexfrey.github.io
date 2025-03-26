@@ -1,38 +1,48 @@
+/* Reset & Base */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f4f8;
   color: #333;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
 
+/* Banner Image */
 .banner {
   width: 100%;
   height: auto;
 }
 
+/* Blue Divider */
 .divider {
   height: 4px;
   background-color: #007acc;
 }
 
+/* Navigation Bar */
 nav {
   background-color: #007acc;
   padding: 12px 0;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
 nav a {
   color: white;
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
+  font-size: 1em;
 }
-
 nav a:hover {
   text-decoration: underline;
 }
 
+/* Page Container */
 .container {
   max-width: 800px;
   margin: 30px auto;
@@ -42,14 +52,36 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Headings */
 h1, h2 {
   color: #007acc;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
 }
 
+/* Paragraphs and Lists */
 p {
   font-size: 1.1em;
+  margin-bottom: 15px;
 }
-
 ul {
   padding-left: 20px;
+  font-size: 1.1em;
+}
+li {
+  margin-bottom: 10px;
+}
+
+/* Links */
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
