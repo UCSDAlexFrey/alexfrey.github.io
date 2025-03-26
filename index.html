@@ -1,134 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alexander Frey — Venture Builder</title>
   <style>
-    html {
-      scroll-behavior: smooth;
+    /* General Reset */
+    body, h1, h2, p, ul {
+      margin: 0;
+      padding: 0;
     }
-
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f4f8;
       color: #333;
-      margin: 0;
-      padding: 0;
+      line-height: 1.6;
     }
-
-    /* NAV BAR */
+    /* Banner Image */
+    .banner {
+      width: 100%;
+      height: auto;
+    }
+    /* Blue Divider */
+    .divider {
+      height: 4px;
+      background-color: #007acc;
+    }
+    /* Navigation Bar */
     nav {
       background-color: #007acc;
-      padding: 15px 20px;
+      padding: 10px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
     nav ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
       list-style: none;
+      display: flex;
       justify-content: center;
-      gap: 25px;
     }
-
+    nav ul li {
+      margin: 0 15px;
+    }
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1em;
     }
-
     nav ul li a:hover {
       text-decoration: underline;
     }
-
-    .banner {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .divider {
-      height: 6px;
-      background-color: #007acc;
-      width: 100%;
-    }
-
+    /* Container */
     .container {
-      max-width: 900px;
-      margin: auto;
+      max-width: 800px;
+      margin: 20px auto;
       background: white;
-      padding: 40px 30px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    .section {
-      margin-bottom: 60px;
+    /* Sections */
+    section {
+      margin-bottom: 40px;
     }
-
-    .headshot-octagon {
-      width: 120px;
-      height: 120px;
-      background-image: url("headshot.JPG");
-      background-size: cover;
-      background-position: center;
-      clip-path: polygon(
-        30% 0%, 70% 0%,
-        100% 30%, 100% 70%,
-        70% 100%, 30% 100%,
-        0% 70%, 0% 30%
-      );
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-
     h1, h2 {
       color: #007acc;
     }
-
-    h1 {
-      font-size: 2.4em;
-      margin-top: 0;
-    }
-
-    h2 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-
-    p, li {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-
     ul {
-      padding-left: 20px;
+      list-style: disc;
+      margin-left: 20px;
     }
-
     a {
       color: #007acc;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
-    }
-
-    .center {
-      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <!-- Banner -->
+  <!-- Banner Image -->
   <img src="banner.jpeg" alt="Banner Image" class="banner">
   <div class="divider"></div>
 
-  <!-- Nav Bar -->
+  <!-- Navigation Bar -->
   <nav>
     <ul>
       <li><a href="#intro">Intro</a></li>
@@ -139,32 +96,31 @@
     </ul>
   </nav>
 
-  <!-- Main Content -->
+  <!-- Main Content Container -->
   <div class="container">
 
-    <!-- Intro Section -->
-    <div id="intro" class="section center">
-      <div class="headshot-octagon" style="margin: auto;"></div>
+    <!-- Introduction Section -->
+    <section id="intro">
       <h1>Alexander Frey</h1>
       <h2>Venture Builder | Startup Mentor | Ecosystem Connector</h2>
-      <p><em>Multilingual venture builder with expertise in tech and biotech acceleration, strategic partnerships, and venture capital. Proven ability to scale startups, secure funding, and lead investor relations. Passionate about fostering innovation in tech and life sciences and supporting early-stage founders through ecosystem-building and mentorship.</em></p>
-    </div>
+      <p>Multilingual venture builder with expertise in tech and biotech acceleration, strategic partnerships, and venture capital. Proven ability to scale startups, secure funding, and lead investor relations. Passionate about fostering innovation in tech and life sciences and supporting early-stage founders through ecosystem-building and mentorship.</p>
+    </section>
 
     <!-- About Section -->
-    <div id="about" class="section">
+    <section id="about">
       <h2>About Me</h2>
-      <p>Based in San Diego, I currently lead strategic partnerships at <strong>HomeLab</strong>, the largest biotech accelerator on the U.S. West Coast — where I connect global innovators, investors, and life sciences leaders to drive impact.</p>
+      <p>Based in San Diego, I currently lead strategic partnerships at HomeLab, the largest biotech accelerator on the U.S. West Coast — where I connect global innovators, investors, and life sciences leaders to drive impact.</p>
       <p>My journey spans from Zurich’s wealth management scene to the innovation corridors of Southern California and Tel Aviv. I speak English and German fluently, and have working knowledge of French and Spanish.</p>
-    </div>
+    </section>
 
     <!-- Experience Section -->
-    <div id="experience" class="section">
+    <section id="experience">
       <h2>Startup & Venture Experience</h2>
       <p>I’ve co-founded and advised multiple early-stage ventures, helping them go from idea to launch. I’ve secured non-dilutive funding, earned grant wins, developed investor strategies, and led go-to-market efforts. I also managed investor relations for a global VC platform, helping drive new capital to high-growth startups.</p>
-    </div>
+    </section>
 
     <!-- Affiliations Section -->
-    <div id="affiliations" class="section">
+    <section id="affiliations">
       <h2>Affiliations & Mentorship</h2>
       <ul>
         <li>Board Member, Swiss American Chamber of Commerce SoCal</li>
@@ -172,15 +128,14 @@
         <li>Member, San Diego Innovation Council</li>
         <li>Panelist, Swissnex and Nucleate</li>
       </ul>
-    </div>
+    </section>
 
     <!-- Contact Section -->
-    <div id="contact" class="section">
+    <section id="contact">
       <h2>Contact</h2>
       <p>Let’s connect on <a href="https://www.linkedin.com/in/alex-e-frey" target="_blank">LinkedIn</a> if you're building something bold or want to explore the future of biotech, venture capital, or innovation ecosystems.</p>
-      <p>📍 San Diego, CA<br>
-         🎓 MBA – UC San Diego Rady School of Management</p>
-    </div>
+      <p>San Diego, CA<br>MBA – UC San Diego Rady School of Management</p>
+    </section>
 
   </div>
 
