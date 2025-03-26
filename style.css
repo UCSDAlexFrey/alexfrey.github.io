@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -54,10 +54,10 @@ nav a:hover {
   background-color: #007acc;
 }
 
-/* Main Page Container */
+/* Page Container */
 .container {
   max-width: 800px;
-  margin: 200px auto 30px auto; /* leave room for fixed nav + banner */
+  margin: 200px auto 30px auto; /* space for fixed nav + banner */
   background: white;
   padding: 30px;
   border-radius: 8px;
@@ -73,11 +73,11 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-.headshot {
+.headshot-circle {
   width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 50%;
   box-shadow: 0 0 6px rgba(0,0,0,0.15);
   flex-shrink: 0;
 }
@@ -118,7 +118,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Mobile Responsiveness */
+/* Responsive Styles */
 @media (max-width: 600px) {
   nav a {
     display: block;
