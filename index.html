@@ -4,11 +4,134 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alexander Frey — Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Base Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Banner */
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .divider {
+      height: 4px;
+      background-color: #007acc;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #007acc;
+      padding: 12px 0;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+      max-width: 800px;
+      margin: 140px auto 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Profile section */
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .headshot {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+
+    h1, h2 {
+      color: #007acc;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      margin-top: 5px;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .container {
+        margin: 160px 15px 30px 15px;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Banner and Divider -->
+  <!-- Banner & Divider -->
   <img src="images/Banner Monty the Corgi.jpeg" alt="Banner Image" class="banner" />
   <div class="divider"></div>
 
@@ -20,22 +143,22 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Main Container -->
+  <!-- Main Content -->
   <div class="container">
-  <div class="profile-header" style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
-    <img src="images/Headshot Alex.JPG" alt="Alexander Frey Headshot"
-         style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px; box-shadow: 0 0 6px rgba(0,0,0,0.15);" />
-    <div>
-      <h1>Alexander Frey</h1>
-      <h2>Multilingual Venture Builder | Startup Mentor | Ecosystem Connector</h2>
+    <div class="profile">
+      <img src="images/Headshot Alex.JPG" alt="Alexander Frey Headshot" class="headshot" />
+      <div>
+        <h1>Alexander Frey</h1>
+        <h2>Multilingual Venture Builder | Startup Mentor | Ecosystem Connector</h2>
+      </div>
     </div>
-  </div>
 
     <p>
-      Multilingual venture builder with global experience in scaling tech and biotech startups through strategic partnerships, venture capital,
-      and accelerator programs. Proven track record in securing funding, leading investor relations, and guiding early-stage companies from
-      ideation to growth. Deeply involved in the venture capital ecosystem with a focus on supporting founders across borders. Passionate
-      about advancing innovation in life sciences and technology through mentorship, community-building, and cross-border collaboration.
+      Multilingual venture builder with global experience in scaling tech and biotech startups through strategic partnerships,
+      venture capital, and accelerator programs. Proven track record in securing funding, leading investor relations, and guiding
+      early-stage companies from ideation to growth. Deeply involved in the venture capital ecosystem with a focus on supporting
+      founders across borders. Passionate about advancing innovation in life sciences and technology through mentorship,
+      community-building, and cross-border collaboration.
     </p>
 
     <p>
