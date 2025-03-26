@@ -167,3 +167,55 @@ a:hover {
     margin-bottom: 10px;
   }
 }
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 14px;
+  font-size: 0.9em;
+  border: none;
+  background: #007acc;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+  background: #005f99;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #e4e4e4;
+}
+
+body.dark-mode .container {
+  background-color: #2a2a2a;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+body.dark-mode nav {
+  background-color: #111;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode nav a {
+  color: #ddd;
+}
+
+body.dark-mode .divider {
+  background-color: #444;
+}
+
+body.dark-mode a {
+  color: #66b2ff;
+}
+
+body.dark-mode .theme-toggle {
+  background: #444;
+  color: #eee;
+}
