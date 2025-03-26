@@ -12,19 +12,6 @@ body {
   line-height: 1.6;
 }
 
-/* Banner */
-.banner {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Divider */
-.divider {
-  height: 4px;
-  background-color: #007acc;
-}
-
 /* Navigation Bar */
 nav {
   background-color: #007acc;
@@ -49,17 +36,35 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Main Container */
+/* Banner */
+.banner {
+  position: fixed;
+  top: 48px; /* height of nav bar */
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center bottom; /* show bottom 2/3 of image */
+  z-index: 500;
+}
+
+/* Divider Under Banner */
+.divider {
+  margin-top: 150px; /* match height of banner */
+  height: 4px;
+  background-color: #007acc;
+}
+
+/* Main Page Container */
 .container {
   max-width: 800px;
-  margin: 140px auto 30px auto;
+  margin: 200px auto 30px auto; /* leave room for fixed nav + banner */
   background: white;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Profile Section (for Home page) */
+/* Profile Section (Home Page Only) */
 .profile {
   display: flex;
   align-items: center;
@@ -113,7 +118,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Styles */
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
   nav a {
     display: block;
@@ -127,7 +132,7 @@ a:hover {
   }
 
   .container {
-    margin: 160px 15px 30px 15px;
+    margin: 210px 15px 30px 15px;
     padding: 20px;
   }
 }
