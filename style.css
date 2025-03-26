@@ -56,3 +56,41 @@ p {
   font-size: 1.1em;
   margin-bottom: 15px;
 }
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    font-size: 0.95em;
+  }
+
+  .container {
+    margin: 120px 15px 30px 15px;
+    padding: 20px;
+  }
+
+  .banner {
+    height: auto;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p, li {
+    font-size: 1em;
+  }
+
+  /* For home page layout with headshot + name */
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-header img {
+    margin-bottom: 15px;
+  }
+}
