@@ -1,21 +1,31 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f4f8;
   color: #333;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
 
+/* Banner */
 .banner {
   width: 100%;
   height: auto;
+  display: block;
 }
 
+/* Divider */
 .divider {
   height: 4px;
   background-color: #007acc;
 }
 
+/* Navigation Bar */
 nav {
   background-color: #007acc;
   padding: 12px 0;
@@ -26,71 +36,98 @@ nav {
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-}
 
 nav a {
   color: white;
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
+  font-size: 1em;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
+/* Main Container */
 .container {
   max-width: 800px;
-  margin: 100px auto 30px auto;
+  margin: 140px auto 30px auto;
   background: white;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Profile Section (for Home page) */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.headshot {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
 h1, h2 {
   color: #007acc;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-top: 5px;
 }
 
 p {
   font-size: 1.1em;
   margin-bottom: 15px;
 }
+
+ul {
+  padding-left: 20px;
+  font-size: 1.1em;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive Styles */
-@media (max-width: 768px) {
-  nav {
-    font-size: 0.95em;
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
   }
 
-  .container {
-    margin: 120px 15px 30px 15px;
-    padding: 20px;
-  }
-
-  .banner {
-    height: auto;
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-
-  h2 {
-    font-size: 1.2em;
-  }
-
-  p, li {
-    font-size: 1em;
-  }
-
-  /* For home page layout with headshot + name */
-  .profile-header {
+  .profile {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .profile-header img {
-    margin-bottom: 15px;
+  .container {
+    margin: 160px 15px 30px 15px;
+    padding: 20px;
   }
 }
