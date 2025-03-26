@@ -1,1 +1,55 @@
-<link rel="stylesheet" href="style.css" />
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+.divider {
+  height: 4px;
+  background-color: #007acc;
+}
+
+nav {
+  background-color: #007acc;
+  padding: 12px 0;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  color: #007acc;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+ul {
+  padding-left: 20px;
+}
