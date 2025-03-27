@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +14,10 @@ body {
   background-color: #f9f9fb;
   color: #2a2a2a;
   line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Navigation Bar */
 .nav {
   background-color: #2C2C54;
   padding: 12px 0;
@@ -23,6 +26,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .nav a {
@@ -34,6 +38,7 @@ body {
   display: inline-block;
 }
 
+/* Mobile Menu Toggle */
 .mobile-menu-toggle {
   display: none;
   position: fixed;
@@ -49,6 +54,7 @@ body {
   cursor: pointer;
 }
 
+/* Dark Mode Toggle */
 .theme-toggle {
   position: fixed;
   top: 10px;
@@ -61,18 +67,27 @@ body {
   border-radius: 6px;
   cursor: pointer;
   z-index: 1100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
 }
 
+.theme-toggle:hover {
+  background: #4D9DE0;
+}
+
+/* Main Content Container */
 .container {
   max-width: 1000px;
   margin: 120px auto 30px auto;
   background: white;
   padding: 30px;
-  padding-bottom: 200px; /* prevents overlap with fixed banner */
+  padding-bottom: 200px; /* prevent content overlap with banner */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
 }
 
+/* Profile */
 .profile {
   display: flex;
   align-items: center;
@@ -100,8 +115,10 @@ body {
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
+/* Typography */
 h1, h2, h3 {
   color: #2C2C54;
+  transition: color 0.3s ease;
 }
 
 h1 {
@@ -129,6 +146,7 @@ a:hover {
   color: #4D9DE0;
 }
 
+/* Bottom Banner Image */
 .banner {
   position: fixed;
   bottom: 0;
@@ -141,7 +159,14 @@ a:hover {
   z-index: -1;
 }
 
-/* Dark Mode */
+/* Divider (optional) */
+.divider {
+  height: 4px;
+  background-color: #4D9DE0;
+  width: 100%;
+}
+
+/* Dark Mode Styles */
 body.dark-mode {
   background-color: #12151f;
   color: #dcdcdc;
@@ -155,6 +180,7 @@ body.dark-mode h3 {
 
 body.dark-mode .container {
   background-color: #1d2028;
+  color: #dcdcdc;
 }
 
 body.dark-mode .nav {
@@ -178,7 +204,7 @@ body.dark-mode .theme-toggle {
   color: #12151f;
 }
 
-/* Mobile */
+/* Mobile Responsive Styles */
 @media (max-width: 600px) {
   .mobile-menu-toggle {
     display: block;
@@ -190,7 +216,7 @@ body.dark-mode .theme-toggle {
     max-height: 0;
     overflow: hidden;
     background-color: #2C2C54;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.4s ease, padding 0.3s ease;
   }
 
   .nav.open {
