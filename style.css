@@ -284,11 +284,14 @@ body.dark-mode .company-logo {
     font-size: 1.1em;
   }
 
-  .container {
-    margin-top: 100px;
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 20px;
+.container {
+  max-width: 1000px;
+  margin: 120px auto 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
   }
 
   .profile {
