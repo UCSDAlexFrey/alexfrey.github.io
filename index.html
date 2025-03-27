@@ -5,12 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alexander Frey — Home</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Banner and Divider -->
-  <img src="images/Banner Monty the Corgi.jpeg" alt="Banner Image" class="banner" />
-  <div class="divider"></div>
 
   <!-- Navigation -->
   <nav>
@@ -19,6 +16,9 @@
     <a href="education.html">Education</a>
     <a href="contact.html">Contact</a>
   </nav>
+
+  <!-- Dark Mode Toggle -->
+  <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
 
   <!-- Main Content -->
   <div class="container">
@@ -45,7 +45,38 @@
       the largest biotech accelerator on the West Coast powered by LabFellows. I also serve on the board of the
       <a href="https://www.amcham.ch/chapters/southern-california" target="_blank">Swiss American Chamber of Commerce SoCal</a>.
     </p>
+
+    <!-- Company Logos Section -->
+    <h2>Companies I've Worked With</h2>
+    <div class="logo-grid">
+      <img src="images/Zotiko.jpeg" alt="Zotiko Logo" class="company-logo" />
+      <img src="images/ourcrowdlogo.jpg" alt="OurCrowd Logo" class="company-logo" />
+      <img src="images/Vontobel.png" alt="Vontobel Logo" class="company-logo" />
+      <img src="images/BlackRock-logo.png" alt="BlackRock Logo" class="company-logo" />
+      <img src="images/creditsuisse.png" alt="Credit Suisse Logo" class="company-logo" />
+    </div>
   </div>
+
+  <!-- Bottom Banner -->
+  <div class="divider"></div>
+  <img src="images/Banner Monty the Corgi.jpeg" alt="Banner Image" class="banner" />
+
+  <!-- Dark Mode Script -->
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const currentTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+
+    document.body.classList.toggle('dark-mode', currentTheme === 'dark');
+    toggleButton.textContent = currentTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      toggleButton.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
 
 </body>
 </html>
