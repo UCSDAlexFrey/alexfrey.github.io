@@ -105,7 +105,7 @@ body {
 }
 
 /* Typography */
-h1, h2 {
+h1, h2, h3 {
   color: #2C2C54;
 }
 
@@ -158,6 +158,29 @@ a:hover {
   object-fit: contain;
 }
 
+/* Company Logo Grid */
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.company-logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: transform 0.2s ease;
+}
+
+.company-logo:hover {
+  transform: scale(1.05);
+}
+
 /* Bottom Banner */
 .banner {
   position: relative;
@@ -175,33 +198,16 @@ a:hover {
   width: 100%;
 }
 
-/* Company Logo Grid */
-.logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-.company-logo {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-  filter: grayscale(0%);
-  transition: transform 0.2s ease;
-}
-
-.company-logo:hover {
-  transform: scale(1.05);
-}
-
-/* Dark Mode */
+/* Dark Mode Styles */
 body.dark-mode {
   background-color: #12151f;
   color: #dcdcdc;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #ffffff; /* Bright headers in dark mode */
 }
 
 body.dark-mode .container {
@@ -239,7 +245,7 @@ body.dark-mode .company-logo {
   filter: grayscale(0%) brightness(0.85);
 }
 
-/* Mobile Navigation Animation */
+/* Mobile Responsive Styles */
 @media (max-width: 600px) {
   .mobile-menu-toggle {
     display: block;
@@ -255,7 +261,7 @@ body.dark-mode .company-logo {
   }
 
   .nav.open {
-    max-height: 300px; /* adjust if needed */
+    max-height: 300px;
     padding: 10px;
   }
 
@@ -286,31 +292,4 @@ body.dark-mode .company-logo {
   .edu-logo {
     margin-bottom: 10px;
   }
-}
-/* Company Logo Grid */
-.logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-.company-logo {
-  width: 150px;         /* Uniform width for all logos */
-  height: auto;         /* Maintain aspect ratio */
-  object-fit: contain;
-  filter: grayscale(0%);
-  transition: transform 0.2s ease;
-}
-
-.company-logo:hover {
-  transform: scale(1.05);
-}
-
-/* Dark Mode Logo Brightness */
-body.dark-mode .company-logo {
-  filter: grayscale(0%) brightness(0.85);
 }
