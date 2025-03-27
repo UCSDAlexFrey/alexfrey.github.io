@@ -287,3 +287,30 @@ body.dark-mode .company-logo {
     margin-bottom: 10px;
   }
 }
+/* Company Logo Grid */
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.company-logo {
+  width: 150px;         /* Uniform width for all logos */
+  height: auto;         /* Maintain aspect ratio */
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: transform 0.2s ease;
+}
+
+.company-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Dark Mode Logo Brightness */
+body.dark-mode .company-logo {
+  filter: grayscale(0%) brightness(0.85);
+}
