@@ -87,7 +87,7 @@ body {
   transition: background 0.3s ease;
 }
 
-/* Profile */
+/* Profile Section */
 .profile {
   display: flex;
   align-items: center;
@@ -136,17 +136,21 @@ p {
   margin-bottom: 15px;
 }
 
+/* Link Styling */
 a {
-  color: #2C2C54;
+  color: #1a4dab;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
-a:hover {
-  color: #4D9DE0;
+a:hover,
+a:focus {
+  color: #0a58ca;
+  text-decoration: underline;
 }
 
-/* Bottom Banner Image */
+/* Banner */
 .banner {
   position: fixed;
   bottom: 0;
@@ -159,7 +163,7 @@ a:hover {
   z-index: -1;
 }
 
-/* Divider (optional) */
+/* Divider */
 .divider {
   height: 4px;
   background-color: #4D9DE0;
@@ -196,7 +200,13 @@ body.dark-mode .nav a:hover {
 }
 
 body.dark-mode a {
-  color: #4D9DE0;
+  color: #7abfff;
+}
+
+body.dark-mode a:hover,
+body.dark-mode a:focus {
+  color: #9bd1ff;
+  text-decoration: underline;
 }
 
 body.dark-mode .theme-toggle {
@@ -204,7 +214,7 @@ body.dark-mode .theme-toggle {
   color: #12151f;
 }
 
-/* Mobile Responsive Styles */
+/* Responsive Design */
 @media (max-width: 600px) {
   .mobile-menu-toggle {
     display: block;
