@@ -6,12 +6,21 @@
   <title>Alexander Frey — Home</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Social Media Preview (Open Graph) -->
+  <meta property="og:title" content="Alexander Frey — Multilingual Venture Builder" />
+  <meta property="og:description" content="Strategic partnerships, biotech innovation, and startup acceleration." />
+  <meta property="og:image" content="https://alexfrey.me/images/Headshot%20Alex.JPG" />
+  <meta property="og:url" content="https://alexfrey.me" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
 
+  <!-- Dark Mode + Mobile Menu Toggle -->
   <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
   <button id="mobile-menu-toggle" class="mobile-menu-toggle">☰</button>
 
+  <!-- Navigation -->
   <nav id="main-nav" class="nav">
     <a href="index.html">Home</a>
     <a href="experience.html">Experience</a>
@@ -19,6 +28,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- Main Content -->
   <div class="container">
     <div class="profile">
       <div class="headshot-wrapper">
@@ -37,17 +47,22 @@
     </p>
 
     <p>
-      Currently leading strategic partnerships at <a href="https://homelab.com" target="_blank">HomeLab</a>, California’s top biotech accelerator supporting over 100 startups annually — from cell and gene therapy to AI in drug discovery.
+      Currently leading strategic partnerships at <a href="https://homelab.com" target="_blank">HomeLab</a>,
+      California’s top biotech accelerator supporting over 100 startups annually — from cell and gene therapy to AI in drug discovery.
     </p>
 
     <p>
-      Also serving as a board member of the <a href="https://www.saccla.org" target="_blank">Swiss American Chamber of Commerce SoCal</a>, a business hub fostering collaboration between Southern California and Switzerland.
+      Also serving as a board member of the
+      <a href="https://www.saccla.org" target="_blank">Swiss American Chamber of Commerce SoCal</a>,
+      a business hub fostering collaboration between Southern California and Switzerland.
     </p>
   </div>
 
+  <!-- Bottom Banner -->
   <div class="divider"></div>
   <img src="images/Banner Monty the Corgi.jpeg" alt="Banner Image" class="banner" />
 
+  <!-- JavaScript for Dark Mode + Mobile Menu -->
   <script>
     const themeToggle = document.getElementById('theme-toggle');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
