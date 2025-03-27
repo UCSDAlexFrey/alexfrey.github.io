@@ -22,6 +22,7 @@ body {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: max-height 0.4s ease, padding 0.3s ease;
 }
 
 .nav a {
@@ -238,21 +239,24 @@ body.dark-mode .company-logo {
   filter: grayscale(0%) brightness(0.85);
 }
 
-/* Responsive Design */
+/* Mobile Navigation Animation */
 @media (max-width: 600px) {
   .mobile-menu-toggle {
     display: block;
   }
 
   .nav {
-    display: none;
+    display: flex;
     flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
     background-color: #2C2C54;
-    padding: 10px;
+    transition: max-height 0.4s ease, padding 0.3s ease;
   }
 
   .nav.open {
-    display: flex;
+    max-height: 300px; /* adjust if needed */
+    padding: 10px;
   }
 
   .nav a {
@@ -260,17 +264,17 @@ body.dark-mode .company-logo {
     font-size: 1.1em;
   }
 
-  .profile {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
   .container {
     margin-top: 100px;
     margin-left: 15px;
     margin-right: 15px;
     padding: 20px;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .education-entry {
