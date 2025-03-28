@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You! 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #2C2C54, #4D9DE0);
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 12px 24px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      animation: confetti-fall 5s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes confetti-fall {
+      0% { transform: translateY(-10vh) rotate(0); }
+      100% { transform: translateY(100vh) rotate(720deg); }
+    }
+
+    /* Generate some random confetti */
+    .confetti:nth-child(1)  { left: 10%; animation-delay: 0s; }
+    .confetti:nth-child(2)  { left: 30%; animation-delay: 1s; background-color: #ffdd57; }
+    .confetti:nth-child(3)  { left: 50%; animation-delay: 2s; background-color: #00cec9; }
+    .confetti:nth-child(4)  { left: 70%; animation-delay: 3s; background-color: #fd79a8; }
+    .confetti:nth-child(5)  { left: 90%; animation-delay: 4s; background-color: #a29bfe; }
+  </style>
+</head>
+<body>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+
+  <div class="container">
+    <h1>🎉 Thank You!</h1>
+    <p>Your message has been successfully sent.<br>I'll be in touch soon!</p>
+    <a href="index.html">← Back to Home</a>
+  </div>
+</body>
+</html>
