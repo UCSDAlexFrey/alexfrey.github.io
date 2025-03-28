@@ -5,52 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alexander Frey — Home</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <meta property="og:title" content="Alexander Frey — Multilingual Venture Builder" />
-  <meta property="og:description" content="Strategic partnerships, biotech innovation, and startup acceleration." />
-  <meta property="og:image" content="https://alexfrey.me/images/Headshot%20Alex.JPG" />
-  <meta property="og:url" content="https://alexfrey.me" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
   <button id="mobile-menu-toggle" class="mobile-menu-toggle">☰</button>
-
   <nav id="main-nav" class="nav">
     <a href="index.html">Home</a>
     <a href="experience.html">Experience</a>
     <a href="education.html">Education</a>
     <a href="contact.html">Contact</a>
   </nav>
-
-  <div class="container" data-aos="fade-up">
+  <div class="container">
     <div class="profile">
-      <div class="headshot-wrapper" data-aos="zoom-in">
+      <div class="headshot-wrapper">
         <img src="images/Headshot Alex.JPG" alt="Alexander Frey Headshot" class="headshot-circle" />
       </div>
-      <div class="profile-text" data-aos="fade-left">
+      <div class="profile-text">
         <h1>Alexander Frey</h1>
         <h2>Multilingual Venture Builder | Startup Mentor | Ecosystem Connector</h2>
       </div>
     </div>
-
-    <p data-aos="fade-in">
+    <p>
       Multilingual venture builder with global experience in scaling tech and biotech startups through strategic partnerships, venture capital, and accelerator programs. Proven track record in securing funding, leading investor relations, and guiding early-stage companies from ideation to growth.
     </p>
-    <p data-aos="fade-in" data-aos-delay="100">
+    <p>
       Currently leading strategic partnerships at <a href="https://homelab.com" target="_blank">HomeLab</a>, California’s top biotech accelerator.
     </p>
-    <p data-aos="fade-in" data-aos-delay="200">
+    <p>
       Board member of the <a href="https://www.saccla.org" target="_blank">Swiss American Chamber of Commerce SoCal</a>, a hub connecting Southern California and Switzerland.
     </p>
   </div>
-
   <img src="images/Banner Monty the Corgi.jpeg" alt="Banner Image" class="banner" />
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 800, once: true });
     const themeToggle = document.getElementById('theme-toggle');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const storedTheme = localStorage.getItem('theme');
@@ -62,6 +50,7 @@
       localStorage.setItem('theme', currentlyDark ? 'dark' : 'light');
       themeToggle.textContent = currentlyDark ? '☀️ Light Mode' : '🌙 Dark Mode';
     });
+
     const menuToggle = document.getElementById('mobile-menu-toggle');
     const nav = document.getElementById('main-nav');
     menuToggle.addEventListener('click', () => {
