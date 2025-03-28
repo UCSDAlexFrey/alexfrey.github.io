@@ -1,4 +1,5 @@
-/* Reset and Base Styles */
+/* style.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +18,6 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Navigation Bar */
 .nav {
   background-color: #2C2C54;
   padding: 12px 0;
@@ -38,7 +38,6 @@ body {
   display: inline-block;
 }
 
-/* Mobile Menu Toggle */
 .mobile-menu-toggle {
   display: none;
   position: fixed;
@@ -54,7 +53,6 @@ body {
   cursor: pointer;
 }
 
-/* Dark Mode Toggle */
 .theme-toggle {
   position: fixed;
   top: 10px;
@@ -75,19 +73,17 @@ body {
   background: #4D9DE0;
 }
 
-/* Main Content Container */
 .container {
   max-width: 1000px;
   margin: 120px auto 30px auto;
   background: white;
   padding: 30px;
-  padding-bottom: 200px; /* keep banner visible */
+  padding-bottom: 200px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: background 0.3s ease;
 }
 
-/* Profile Section */
 .profile {
   display: flex;
   align-items: center;
@@ -115,7 +111,6 @@ body {
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-/* Typography */
 h1, h2, h3 {
   color: #2C2C54;
   transition: color 0.3s ease;
@@ -149,7 +144,6 @@ a:focus {
   text-decoration: underline;
 }
 
-/* Banner Image */
 .banner {
   position: fixed;
   bottom: 0;
@@ -162,14 +156,12 @@ a:focus {
   z-index: -1;
 }
 
-/* Divider */
 .divider {
   height: 4px;
   background-color: #4D9DE0;
   width: 100%;
 }
 
-/* Dark Mode Styles */
 body.dark-mode {
   background-color: #12151f;
   color: #dcdcdc;
@@ -213,7 +205,6 @@ body.dark-mode .theme-toggle {
   color: #12151f;
 }
 
-/* Logos and Layout */
 .education-entry,
 .logo-grid {
   display: flex;
@@ -231,7 +222,6 @@ body.dark-mode .theme-toggle {
   flex-shrink: 0;
 }
 
-/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -280,7 +270,6 @@ body.dark-mode .contact-form button {
   color: #12151f;
 }
 
-/* Mobile Layout */
 @media (max-width: 600px) {
   .mobile-menu-toggle {
     display: block;
