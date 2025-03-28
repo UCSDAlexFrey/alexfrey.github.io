@@ -11,17 +11,17 @@
   <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
   <button id="mobile-menu-toggle" class="mobile-menu-toggle">☰</button>
 
-  <nav id="main-nav" class="nav">
+  <nav id="main-nav" class="nav animate-slide-down">
     <a href="index.html">Home</a>
     <a href="experience.html">Experience</a>
     <a href="education.html">Education</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="container">
+  <div class="container fade-in">
     <h1>Contact</h1>
     <p>
-      If you'd like to connect, feel free to reach out using the form below or message me on 
+      If you'd like to connect, use the form below or reach out via 
       <a href="https://www.linkedin.com/in/alexmfrey/" target="_blank">LinkedIn</a>.
     </p>
 
@@ -33,7 +33,7 @@
 
       <div class="form-group">
         <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
       </div>
 
       <div class="form-group">
@@ -41,8 +41,8 @@
         <textarea id="message" name="message" rows="6" placeholder="How can I help you?" required></textarea>
       </div>
 
-      <!-- 🐝 Honeypot field for spam bots -->
-      <div style="display:none;">
+      <!-- Honeypot anti-spam field -->
+      <div style="display: none;">
         <label>Leave this field empty</label>
         <input type="text" name="_gotcha" />
       </div>
@@ -76,7 +76,6 @@
       nav.classList.toggle('open');
     });
 
-    // Optional: Form submission fallback success message
     const form = document.getElementById("contact-form");
     const status = document.getElementById("form-status");
 
@@ -87,16 +86,14 @@
       const response = await fetch(action, {
         method: form.method,
         body: data,
-        headers: {
-          Accept: "application/json",
-        },
+        headers: { Accept: "application/json" }
       });
 
       if (response.ok) {
         form.reset();
-        status.innerHTML = "Thanks for your message! I’ll get back to you soon.";
+        status.innerHTML = "✅ Thanks for your message! I’ll be in touch soon.";
       } else {
-        status.innerHTML = "Oops! There was a problem. Please try again.";
+        status.innerHTML = "⚠️ Oops! Something went wrong.";
       }
     });
   </script>
