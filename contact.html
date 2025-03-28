@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alexander Frey — Contact</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
@@ -18,16 +19,43 @@
 
   <div class="container">
     <h1>Contact</h1>
-    <p>Let’s connect if you're building something bold or want to collaborate in biotech, venture capital, or innovation ecosystems.</p>
-    <ul>
-      <li>📍 San Diego, CA</li>
-      <li>🔗 <a href="https://www.linkedin.com/in/alex-e-frey" target="_blank">LinkedIn</a></li>
-      <li>🌐 <a href="https://www.homelab.com/" target="_blank">HomeLab</a></li>
-      <li>🌐 <a href="https://www.saccla.org/" target="_blank">Swiss American Chamber SoCal</a></li>
-    </ul>
+    <p>If you'd like to connect, feel free to reach out via the form below or on 
+      <a href="https://www.linkedin.com/in/alexmfrey/" target="_blank">LinkedIn</a>.
+    </p>
+
+    <form action="#" method="POST" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="Your message..." required></textarea>
+
+      <button type="submit" disabled>Send (Setup Pending)</button>
+    </form>
   </div>
 
-  <div class="divider"></div>
   <img src="images/Banner Monty the Corgi.jpeg" alt="Banner Image" class="banner" />
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const storedTheme = localStorage.getItem('theme');
+    const isDark = storedTheme ? storedTheme === 'dark' : prefersDark;
+    document.body.classList.toggle('dark-mode', isDark);
+    themeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+    themeToggle.addEventListener('click', () => {
+      const currentlyDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', currentlyDark ? 'dark' : 'light');
+      themeToggle.textContent = currentlyDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const nav = document.getElementById('main-nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
