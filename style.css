@@ -14,6 +14,7 @@ body {
   --link-color: #0056b3;
   --card-bg: #f2f2f2;
   --accent-color: #003366;
+  --logo-bg: #fff;
 }
 
 .dark-mode {
@@ -22,6 +23,7 @@ body {
   --link-color: #66ccff;
   --card-bg: #1f1f1f;
   --accent-color: #1e90ff;
+  --logo-bg: #fff;
 }
 
 .container {
@@ -61,10 +63,12 @@ nav.nav a:hover {
   position: fixed;
   background: none;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1rem;
   z-index: 1100;
   cursor: pointer;
   color: var(--text-color);
+  padding: 0.5rem;
+  background-color: transparent;
 }
 
 .theme-toggle {
@@ -115,7 +119,7 @@ nav.nav a:hover {
 .education-entry,
 .logo-grid,
 .contact-form {
-  background-color: var(--card-bg);
+  background-color: var(--logo-bg);
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 1.5rem;
@@ -128,6 +132,7 @@ nav.nav a:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  background-color: var(--logo-bg);
 }
 
 .company-logo {
@@ -135,12 +140,18 @@ nav.nav a:hover {
   width: auto;
   max-width: 150px;
   object-fit: contain;
+  background-color: var(--logo-bg);
+  padding: 0.5rem;
+  border-radius: 6px;
 }
 
 .edu-logo {
   height: 40px;
   margin-right: 10px;
   vertical-align: middle;
+  background-color: var(--logo-bg);
+  padding: 0.25rem;
+  border-radius: 4px;
 }
 
 .contact-form label {
