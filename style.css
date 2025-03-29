@@ -69,12 +69,13 @@ nav.nav a:hover {
 
 .theme-toggle {
   top: 10px;
-  right: 60px;
+  right: 10px;
 }
 
 .mobile-menu-toggle {
   top: 10px;
-  right: 10px;
+  left: 10px;
+  display: none;
 }
 
 .banner {
@@ -239,20 +240,27 @@ nav.nav a:hover {
   }
 
   nav.nav {
+    display: none;
     flex-direction: column;
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+  }
+
+  nav.nav.open {
+    display: flex;
   }
 
   nav.nav a {
     margin: 10px 0;
   }
 
-  .theme-toggle {
-    top: 60px;
-    right: 10px;
-  }
-
   .mobile-menu-toggle {
-    top: 20px;
-    right: 10px;
+    display: block;
   }
 }
