@@ -21,15 +21,17 @@ body {
   --bg-color: #121212;
   --text-color: #ffffff;
   --link-color: #66ccff;
-  --card-bg: #1f1f1f;
+  --card-bg: #2a2a2a;
   --accent-color: #1e90ff;
-  --logo-bg: #fff;
+  --logo-bg: #fff; /* Only logo background stays white */
 }
 
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 nav.nav {
@@ -117,9 +119,8 @@ nav.nav a:hover {
 }
 
 .education-entry,
-.logo-grid,
 .contact-form {
-  background-color: var(--logo-bg);
+  background-color: var(--card-bg);
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 1.5rem;
@@ -132,7 +133,7 @@ nav.nav a:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  background-color: var(--logo-bg);
+  background-color: transparent;
 }
 
 .company-logo {
@@ -169,6 +170,8 @@ nav.nav a:hover {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .contact-form button {
