@@ -1,239 +1,94 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alexander Frey – Multilingual Venture Builder | Strategic Partnerships | Biotech & VC" />
+  <meta property="og:title" content="Alexander Frey | Venture Builder" />
+  <meta property="og:description" content="Strategic Partnerships | Tech & Biotech | Ecosystem Builder" />
+  <meta property="og:image" content="Headshot Alex.JPG" />
+  <meta property="og:url" content="https://alexfrey.me/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Alexander Frey</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+</head>
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f5f7fa;
-  color: #333;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+<body>
+  <header class="banner">
+    <img src="Banner Monty the Corgi.jpeg" alt="Banner image" />
+  </header>
 
-/* Navigation */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #1f1f3d;
-  color: #fff;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  <nav class="navbar">
+    <div class="logo">AF</div>
 
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #00ffd0;
-}
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
 
-.navbar .nav-links {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-}
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <button id="mode-toggle" aria-label="Toggle dark mode">🌓</button>
+      </li>
+    </ul>
+  </nav>
 
-.navbar .nav-links li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
+  <main class="main-content">
+    <section class="hero-section">
+      <h1 class="hero-title">Welcome to Alexander Frey's World</h1>
+      <p class="hero-subtitle">Venture Capitalist | Biotech Leader | Global Ecosystem Connector</p>
+    </section>
 
-.navbar .nav-links li a:hover {
-  color: #00ffd0;
-}
+    <section class="intro">
+      <div class="headshot-container">
+        <img src="Headshot Alex.JPG" alt="Alexander Frey Headshot" class="headshot" />
+      </div>
+      <div class="intro-text">
+        <h1>Alexander Frey</h1>
+        <h2>Multilingual Venture Builder | Startup Mentor | Ecosystem Connector</h2>
+        <p>
+          I’m a multilingual venture builder based in San Diego with a background spanning tech, biotech, and international finance.
+          I currently lead strategic partnerships at <strong>HomeLab</strong>, California’s top-ranked life sciences accelerator and
+          ground zero for San Diego’s biotech innovation. I’ve spearheaded major sponsorships with globally recognized firms and fostered
+          alliances across sectors.
+        </p>
+        <p>
+          My path includes founding and supporting biotech ventures, raising over $500K in funding, and working across investor relations
+          and strategic finance roles at Vontobel, OurCrowd, Credit Suisse, and BlackRock.
+        </p>
+      </div>
+    </section>
+  </main>
 
-/* Hamburger for mobile */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  cursor: pointer;
-}
+  <footer class="footer">
+    <p>© 2025 Alexander Frey</p>
+  </footer>
 
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 2px;
-}
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("open");
+    }
 
-/* Banner */
-.banner img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  object-position: center;
-}
+    const toggle = document.getElementById("mode-toggle");
+    const root = document.documentElement;
 
-/* Hero Section */
-.hero-section {
-  text-align: center;
-  padding: 3rem 1rem;
-  background-color: #fff;
-}
+    toggle.addEventListener("click", () => {
+      const currentTheme = root.getAttribute("data-theme");
+      const nextTheme = currentTheme === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", nextTheme);
+    });
 
-.hero-title {
-  font-size: 2.5rem;
-  color: #1f1f3d;
-  animation: fadeInDown 1s ease-out;
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  color: #555;
-  margin-top: 1rem;
-}
-
-/* Intro Section */
-.intro {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 3rem 1rem;
-  background-color: #fafafa;
-}
-
-.headshot-container {
-  flex: 1 1 200px;
-  text-align: center;
-}
-
-.headshot {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #1f1f3d;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  animation: scaleUp 1s ease;
-}
-
-.intro-text {
-  flex: 2 1 400px;
-  max-width: 600px;
-  animation: fadeInUp 1s ease;
-}
-
-.intro-text h1 {
-  font-size: 2rem;
-  color: #1f1f3d;
-}
-
-.intro-text h2 {
-  font-size: 1.25rem;
-  color: #0077b6;
-  margin-bottom: 1rem;
-}
-
-.intro-text p {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: #1f1f3d;
-  color: #fff;
-}
-
-/* Light/Dark Mode Toggle */
-[data-theme="dark"] {
-  background-color: #1f1f3d;
-  color: #f5f7fa;
-}
-
-[data-theme="dark"] .intro,
-[data-theme="dark"] .hero-section {
-  background-color: #2a2a48;
-}
-
-[data-theme="dark"] .intro-text h1,
-[data-theme="dark"] .hero-title {
-  color: #fff;
-}
-
-[data-theme="dark"] .intro-text p {
-  color: #ddd;
-}
-
-/* Logo containers (ensure visibility in dark mode) */
-.logo-card {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  margin: 1rem;
-  text-align: center;
-}
-
-/* Animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleUp {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .intro {
-    flex-direction: column;
-    padding: 2rem 1rem;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .navbar .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #1f1f3d;
-    flex-direction: column;
-    width: 100%;
-    display: none;
-  }
-
-  .navbar .nav-links.open {
-    display: flex;
-  }
-}
+    // Optional: respect system preference on load
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      root.setAttribute("data-theme", "dark");
+    }
+  </script>
+</body>
+</html>
