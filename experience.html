@@ -1,91 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexander Frey — Experience</title>
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alexander Frey's professional experience in biotech, venture capital, and strategic partnerships." />
+  <meta name="author" content="Alexander Frey">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <title>Experience | Alexander Frey</title>
 </head>
-<body>
-  <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
-  <button id="mobile-menu-toggle" class="mobile-menu-toggle">☰</button>
 
-  <nav id="main-nav" class="nav animate-slide-down">
-    <a href="index.html">Home</a>
-    <a href="experience.html">Experience</a>
-    <a href="education.html">Education</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="contact.html">Contact</a>
+<body>
+  <header class="banner">
+    <img src="assets/Banner Monty the Corgi.jpeg" alt="Banner" />
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="experience.html" class="active">Experience</a>
+      <a href="education.html">Education</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button id="modeToggle">🌙</button>
+      <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+    </div>
   </nav>
 
-  <div class="container fade-in">
-    <h1>Experience</h1>
+  <main class="main-content">
+    <h2>Experience</h2>
 
-    <div class="education-entry">
-      <div>
-        <strong>Head of Strategic Partnerships — <a href="https://homelab.com" target="_blank">HomeLab</a></strong><br>
-        HomeLab is California's top-ranked life sciences accelerator, and ground zero for San Diego’s innovation ecosystem. Operated by LabFellows within the Center for Novel Therapeutics, it supports biotech startups translating innovations from cell and gene therapies to AI for drug discovery, with over $1.5B in exits and funds raised. HomeLab backs big ideas in big markets with teams who can win.
-      </div>
+    <div class="experience-entry">
+      <h3>Head of Strategic Partnerships</h3>
+      <p><strong>HomeLab, powered by LabFellows</strong> – San Diego, CA</p>
+      <p>
+        Driving strategic partnerships at HomeLab, California’s top-ranked life sciences accelerator and ground zero for San Diego’s biotech innovation. 
+        Spearheading major sponsorships with globally recognized firms and fostering alliances across sectors.  
+        Managing the Event and Social Media team to enhance branding and visibility.
+      </p>
     </div>
 
-    <div class="education-entry">
-      <div>
-        <strong>Startup Founder and Operator</strong><br>
-        Co-founded and supported early-stage biotech and healthtech startups. Responsibilities included capital strategy, investor outreach, branding, and operations.
-      </div>
+    <div class="experience-entry">
+      <h3>Venture Capital Fellow</h3>
+      <p><strong>Venture Institute</strong> – Global</p>
+      <p>
+        Participated in a global program focused on venture capital fundamentals, deal sourcing, due diligence, and fund operations. 
+        Collaborated with emerging managers, advisors, and LPs across industries.
+      </p>
     </div>
 
-    <div class="education-entry">
-      <div>
-        <strong>Venture & Platform Roles</strong><br>
-        Worked in venture-backed platforms with a focus on investor onboarding, due diligence, deal flow management, and founder support.
-      </div>
+    <div class="experience-entry">
+      <h3>Founder & Startup Operator</h3>
+      <p><strong>Multiple Startups</strong> – Switzerland & U.S.</p>
+      <p>
+        Co-founded and advised deep tech startups in biotech and digital health. 
+        Successfully raised over $500K in dilutive and non-dilutive funding. 
+        Led product development, regulatory strategy, and international expansion.
+      </p>
     </div>
 
-    <div class="education-entry">
-      <div>
-        <strong>Private Banking & Finance</strong><br>
-        Early career in international finance and banking with exposure to asset management, compliance, and client relationship services in Zurich and Dallas.
-      </div>
+    <div class="experience-entry">
+      <h3>Private Banking, Investor Relations, Strategic Finance</h3>
+      <p><strong>Financial Institutions</strong> – Zurich, New York, San Diego</p>
+      <p>
+        Worked with leading global firms in investment advisory and wealth management. 
+        Specialized in investor engagement, business development, and strategic client coverage.
+      </p>
     </div>
 
-    <div class="education-entry">
-      <div>
-        <strong>Innovation Ecosystem & Leadership</strong><br>
-        Active board member of the <a href="https://saccla.org" target="_blank">Swiss American Chamber of Commerce SoCal</a>, driving cross-border innovation, community engagement, and international startup support.
-      </div>
+    <div class="logo-gallery light-bg">
+      <img src="assets/ourcrowdlogo.jpg" alt="OurCrowd" />
+      <img src="assets/Vontobel.png" alt="Vontobel" />
+      <img src="assets/BlackRock-logo.png" alt="BlackRock" />
+      <img src="assets/creditsuisse.png" alt="Credit Suisse" />
     </div>
+  </main>
 
-    <div class="logo-grid fade-in">
-      <img src="images/ourcrowdlogo.jpg" alt="OurCrowd Logo" class="company-logo">
-      <img src="images/Vontobel.png" alt="Vontobel Logo" class="company-logo">
-      <img src="images/BlackRock-logo.png" alt="BlackRock Logo" class="company-logo">
-      <img src="images/creditsuisse.png" alt="Credit Suisse Logo" class="company-logo">
-    </div>
-  </div>
+  <footer>
+    <p>© 2025 Alexander Frey</p>
+  </footer>
 
-  <img src="images/Banner Monty the Corgi.jpeg" alt="Banner Image" class="banner">
-
-  <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const storedTheme = localStorage.getItem('theme');
-    const isDark = storedTheme ? storedTheme === 'dark' : prefersDark;
-    document.body.classList.toggle('dark-mode', isDark);
-    themeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
-    themeToggle.addEventListener('click', () => {
-      const currentlyDark = document.body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', currentlyDark ? 'dark' : 'light');
-      themeToggle.textContent = currentlyDark ? '☀️ Light Mode' : '🌙 Dark Mode';
-    });
-
-    const menuToggle = document.getElementById('mobile-menu-toggle');
-    const nav = document.getElementById('main-nav');
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
