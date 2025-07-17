@@ -10,6 +10,7 @@ body {
   line-height: 1.6;
   background-color: #f5f7fa;
   color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Navigation */
@@ -46,6 +47,21 @@ body {
 
 .navbar .nav-links li a:hover {
   color: #00ffd0;
+}
+
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
 }
 
 /* Banner */
@@ -132,6 +148,36 @@ body {
   color: #fff;
 }
 
+/* Light/Dark Mode Toggle */
+[data-theme="dark"] {
+  background-color: #1f1f3d;
+  color: #f5f7fa;
+}
+
+[data-theme="dark"] .intro,
+[data-theme="dark"] .hero-section {
+  background-color: #2a2a48;
+}
+
+[data-theme="dark"] .intro-text h1,
+[data-theme="dark"] .hero-title {
+  color: #fff;
+}
+
+[data-theme="dark"] .intro-text p {
+  color: #ddd;
+}
+
+/* Logo containers (ensure visibility in dark mode) */
+.logo-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin: 1rem;
+  text-align: center;
+}
+
 /* Animations */
 @keyframes fadeInDown {
   from {
@@ -173,13 +219,21 @@ body {
     padding: 2rem 1rem;
   }
 
+  .hamburger {
+    display: flex;
+  }
+
   .navbar .nav-links {
-    flex-direction: column;
-    background-color: #1f1f3d;
     position: absolute;
     top: 100%;
     left: 0;
-    right: 0;
+    background-color: #1f1f3d;
+    flex-direction: column;
+    width: 100%;
     display: none;
+  }
+
+  .navbar .nav-links.open {
+    display: flex;
   }
 }
